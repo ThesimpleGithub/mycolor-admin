@@ -1,0 +1,34 @@
+{
+  "name": "mycolor-admin",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://github.com/ThesimpleGithub/mycolor-admin",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -t true",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/styled": "11.10.6",
+    "@mui/icons-material": "5.11.16",
+    "@mui/material": "5.12.0",
+    "@mui/styled-engine-sc": "5.12.0",
+    "axios": "1.3.5",
+    "gh-pages": "5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "6.10.0",
+    "styled-components": "5.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/styled-components": "5.1.26",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.15"
+  }
+}

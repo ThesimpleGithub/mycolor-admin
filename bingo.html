@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    #container {
+      display: grid;
+      width: 500px;
+      height: 500px;
+    }
+    #container > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: beige;
+      border: 1px solid red;
+    }
+    #container > div:hover {
+      background-color: pink;
+    }
+  </style>
+  <body>
+    한 줄당 개수 <input id="input" type="number" value="5" max="10" min="1" />
+    <div id="container"></div>
+    <script>
+      const $input = document.getElementById('input');
+      const $container = document.getElementById('container');
+      let prevInputValue = $input.value;
+
+      $input.addEventListener('input', e => {
+        const rows = e.target.value;
+        if (rows > 10) {
+          $input.value = prevInputValue;
+          return;
+        }
+        prevInputValue = rows;
+        removeElem();
+        render(rows);
+      });
+
+      const getBingoArr = bingoLength => {
+        const set = new Set();
+        while (set.size !== bingoLength) {
+          set.add(Math.floor(Math.random() * bingoLength + 1));
+        }
+        return set;
+      };
+
+      const createBingoElem = num => {
+        const $div = document.createElement('div');
+        const $span = document.createElement('span');
+        $span.innerText = num;
+        $div.appendChild($span);
+        return $div;
+      };
+      const removeElem = () => ($container.innerHTML = '');
+
+      const render = rows => {
+        $container.style.gridTemplateColumns = `repeat(${rows}, 1fr)`;
+        const length = Math.pow(rows, 2);
+        const bingoArr = getBingoArr(length);
+        bingoArr.forEach(num => $container.appendChild(createBingoElem(num)));
+      };
+
+      render(prevInputValue);
+    </script>
+  </body>
+</html>
