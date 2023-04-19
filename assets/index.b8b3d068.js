@@ -301,4 +301,4 @@ html,body{
     min-width: 0;
   }
 
-`;tu.createRoot(document.getElementById("root")).render(ae(QS,{children:[N(zP,{}),N(rP,{})]}));
+`;tu.createRoot(document.getElementById("root")).render(ae(QS,{basename:"mycolor-admin",children:[N(zP,{}),N(rP,{})]}));
