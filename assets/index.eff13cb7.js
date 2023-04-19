@@ -169,6 +169,9 @@ Error generating stack: `+i.message+`
   p {
     margin-bottom: 10px;
   }
+  @media (max-height: 740px) {
+    height: unset;
+  }
 `,VR=ct.form`
   padding: 20px;
   width: 100%;
