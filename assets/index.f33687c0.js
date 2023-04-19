@@ -129,7 +129,7 @@ Error generating stack: `+i.message+`
     border-radius: 100%;
     margin-left: 5px;
   }
-`,aC=({data:e,handleDelete:t,handleUpdate:n})=>ae(lC,{color:e.rgb,children:[N("img",{src:e.productImg}),ae("p",{children:["\uC885\uB958 - ",e.name]}),ae("p",{children:["\uBE0C\uB79C\uB4DC - ",e.company]}),ae("p",{children:["\uC774\uB984 - ",e.type]}),ae("p",{children:["\uC0C9\uC0C1\uBA85 - ",e.colorName]}),ae("div",{children:[ae("span",{children:["\uC0C9\uC0C1\uCF54\uB4DC - #",e.rgb]}),N("span",{})]}),ae("a",{href:`https://link.coupang.com/a/${e.href}`,target:"_blank",children:["\uB9C1\uD06C - ",e.href]}),ae("div",{children:[N(co,{onClick:()=>n(e),children:"\uC218\uC815"}),N(co,{onClick:()=>t(e.filterID),children:"\uC0AD\uC81C"})]})]}),uC=ct.section`
+`,aC=({data:e,handleDelete:t,handleUpdate:n})=>(x.exports.useEffect(()=>{console.log("render")},[]),ae(lC,{color:e.rgb,children:[N("img",{src:e.productImg}),ae("p",{children:["\uC885\uB958 - ",e.name]}),ae("p",{children:["\uBE0C\uB79C\uB4DC - ",e.company]}),ae("p",{children:["\uC774\uB984 - ",e.type]}),ae("p",{children:["\uC0C9\uC0C1\uBA85 - ",e.colorName]}),ae("div",{children:[ae("span",{children:["\uC0C9\uC0C1\uCF54\uB4DC - #",e.rgb]}),N("span",{})]}),ae("a",{href:`https://link.coupang.com/a/${e.href}`,target:"_blank",children:["\uB9C1\uD06C - ",e.href]}),ae("div",{children:[N(co,{onClick:()=>n(e),children:"\uC218\uC815"}),N(co,{onClick:()=>t(e.filterID),children:"\uC0AD\uC81C"})]})]})),uC=ct.section`
   margin: 100px;
   text-align: center;
   article {
