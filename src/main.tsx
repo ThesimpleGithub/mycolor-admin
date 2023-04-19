@@ -5,7 +5,7 @@ import './index.css';
 import GlobalStyle from './styles/global';
 import { BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/mycolor-admin">
     <GlobalStyle />
     <App />
   </BrowserRouter>,
