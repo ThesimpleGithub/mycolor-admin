@@ -223,7 +223,7 @@ Error generating stack: `+i.message+`
     margin-bottom: 10px;
   }
 `,YR=ct.div`
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: space-evenly;
 `,XR={colorName:"",colorNameKor:[],company:"",filterID:0,filterImg:"",href:"",name:"",productImg:"",rgb:"",type:""},JR=()=>{const e=Pd(),{state:t}=Di(),n=t||XR,{filterTypes:r,seasons:o}=x.exports.useContext(Gd),[i,s]=en(n.company),[l,a]=en(n.colorName),[u,c]=en(n.type),[d,p]=en(n.productImg),[v,h]=x.exports.useState(""),[y,S]=en(n.rgb),[m,f]=en(n.href),[g,w]=x.exports.useState([]);x.exports.useEffect(()=>{var P;if(!o[0].colorNameKor)return;h(String((P=r.find(A=>A.name===n.name))==null?void 0:P.filterTypeID));const E=o.map((A,$)=>n.colorNameKor.includes(A.colorNameKor)&&$).filter(A=>A!==!1);o.forEach(A=>g.push(!1)),E.forEach(A=>g[A]=!0),w([...g])},[r]);const C=E=>{g[E]=!g[E],w([...g])};return N(HR,{children:ae(VR,{onSubmit:async E=>{if(E.preventDefault(),!confirm("\uC815\uB9D0\uB85C \uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"))return;const P={filterData:{company:i,colorName:l,type:u,productImg:d,filterTypeID:v,rgb:y,href:m},selectedSeason:g.map((A,$)=>A&&o[$].colorID).filter(A=>A)};try{t?await uo.put("/api/updateFilter",{...P,filterID:t.filterID}):await uo.post("/api/insertFilter",P),alert("\uB370\uC774\uD130\uAC00 \uC131\uACF5\uC801\uC73C\uB85C \uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4."),e("/")}catch(A){alert(`\uC11C\uBC84\uC5D0\uC11C \uC5D0\uB7EC\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4
