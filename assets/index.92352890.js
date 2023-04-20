@@ -115,6 +115,10 @@ Error generating stack: `+i.message+`
   img {
     width: 80px;
   }
+  div:first-of-type {
+    display: flex;
+    align-items: center;
+  }
   div:last-of-type {
     display: flex;
     align-items: center;
