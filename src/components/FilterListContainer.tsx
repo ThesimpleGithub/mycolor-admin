@@ -8,7 +8,8 @@ import FilterBox from './FilterBox';
 import { CategoryContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 const Container = styled.section`
-  margin: 100px;
+  margin: 7vw;
+  margin-top: 100px;
   text-align: center;
   article {
     display: flex;
@@ -83,6 +84,7 @@ const FilterListContainer = () => {
       <article>
         {handleFilterDatas()?.map(data => (
           <FilterBox
+            key={data.filterID}
             data={data}
             handleDelete={handleDelete}
             handleUpdate={handleUpdate}

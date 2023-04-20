@@ -19,11 +19,13 @@ const Container = styled.section`
   p {
     margin-bottom: 10px;
   }
+  @media (max-height: 740px) {
+    height: unset;
+  }
 `;
 const Box = styled.form`
   padding: 20px;
   width: 100%;
-  height: 500px;
   background-color: white;
   box-shadow: rgb(0 0 0 / 34%) 0px 5px 20px;
   display: flex;
@@ -74,13 +76,13 @@ const SelectBox = styled.div`
 const InputBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   div {
     margin-bottom: 10px;
   }
 `;
 const BtnBox = styled.div`
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: space-evenly;
 `;
@@ -110,10 +112,8 @@ const FilterForm = () => {
   const [rgb, setRgb] = useInput(filterData.rgb);
   const [href, setHref] = useInput(filterData.href);
   const [seasonSelected, setSeasonSelected] = useState<boolean[]>([]);
-  console.log(seasonSelected);
   useEffect(() => {
     if (!seasons[0].colorNameKor) return;
-    console.log(123);
     setFilterType(
       String(filterTypes.find(i => i.name === filterData.name)?.filterTypeID),
     );

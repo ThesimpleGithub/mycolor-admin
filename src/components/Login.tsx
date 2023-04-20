@@ -44,6 +44,7 @@ const Login = () => {
         <TextField
           label="패스워드"
           value={pw}
+          type="password"
           onChange={setPW as changeEvent<HTMLInputElement>}
           required
         />

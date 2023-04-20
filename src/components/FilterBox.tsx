@@ -1,6 +1,7 @@
 import { IFilter } from '../interfaces/filter';
 import styled from '@emotion/styled';
 import { Btn } from '../styles/commonStyles';
+import { useEffect } from 'react';
 
 const Container = styled.div<{ color: string }>`
   display: flex;
@@ -17,6 +18,10 @@ const Container = styled.div<{ color: string }>`
   border-radius: 5px;
   img {
     width: 80px;
+  }
+  div:first-of-type {
+    display: flex;
+    align-items: center;
   }
   div:last-of-type {
     display: flex;
@@ -39,6 +44,9 @@ interface props {
   handleUpdate: (filterData: IFilter) => void;
 }
 const FilterBox = ({ data, handleDelete, handleUpdate }: props) => {
+  useEffect(() => {
+    console.log('render');
+  }, []);
   return (
     <Container color={data.rgb}>
       <img src={data.productImg} />

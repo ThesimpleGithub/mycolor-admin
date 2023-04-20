@@ -9,7 +9,6 @@ const useInput = (
 
   const handleChange: changeEvent<HTMLInputElement | HTMLSelectElement> = e => {
     setValue(e.target.value);
-    console.log(e.target.value);
   };
   return [value, handleChange];
 };
